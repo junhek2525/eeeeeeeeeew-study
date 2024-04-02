@@ -1,0 +1,85 @@
+/* CSS에서 다른 CSS 파일을 가져와 연결하는 방식*/
+/* */
+/*
+body {
+    color: red;
+}
+
+#id{
+    ...속성들
+}
+*/
+span.기린{
+    color: red;
+}
+ul > .yellow{
+    color: yellow;
+}
+/*하위 선택자*/
+ul .red{
+    color:red;
+}
+
+.greenyellow ~ li{
+    color: yellowgreen;
+
+}
+.purple:hover{
+    color: palegreen;
+}
+.purple:active{
+    color: purple;
+}
+input:focus{
+    background-color: aqua;
+}
+
+.car span:first-child{
+    color: red;
+}
+.car h3:last-child{
+    color: gray;
+}
+.car *:nth-child(2){
+    color: orange;
+}
+.car *:nth-child(3){
+    color: red;
+}
+.car *:nth-child(4){
+    color: black;
+}
+.car *:not(span){
+    font-size: x-large;
+}
+/*before after*/
+.box::before{
+    content: "★";
+}
+.box::after{
+    content: "뒤!!!!!!!!!!!!!!!!";
+}
+[disabled] {
+    color: darkred;
+}
+[type="password"]{
+    color: chartreuse;
+}
+[value="HI"]{
+    color: blue;
+}
+.animal{
+    color: red;
+}
+/*상속을 받는 대표적인 요소들*/
+/*font관련,line-weight,color,text-align*/
+
+/*우선순위*/
+div{
+    color: red !important;
+}
+#color_yellow {color: yellow;}
+.color_green {color: green;}
+div{color:blue}/*태그 선택지 1점*/
+* {color: brown;}/*전체 선택지 0점*/
+body{color: violet}/*상속을 하지 않음*/
