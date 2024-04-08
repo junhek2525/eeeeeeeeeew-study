@@ -1,0 +1,42 @@
+.parents{
+    
+    border: 2px solid purple;
+    
+    /*margin: 20px;*/
+    /*overflow: hidden;*/
+     display: grid;
+     grid-template-columns: 100px 100px 100px;
+     grid-template-rows: 50px 50px;
+    /* flex=1차원레이아웃*/
+    /* grid->2차원 레이아웃*/
+    /**/
+    /*display: flex;*/
+    /*opacity: 0.9;*/
+    /*position: relative;*/
+    /*flex-direction: row;*/
+   /*justify-content: space-evenly;*/
+   /*align-items: stretch;*/
+
+    
+    
+  
+}
+.child{
+    padding: 10px;
+    margin: 10px;
+    /*width: 30px;
+    height: 30px;*/
+    border: 2px solid blue;
+    /*display: flex;
+    overflow: auto;*/
+    /*background-image: url(icon1.png);*/
+    /*background-repeat: no-repeat;
+    background-position: 100px 30px;*/
+    /*position: relative;
+    top: 10px;
+    z-index: 1;*/
+    
+
+}
+/*background-image: url(icon1.png);*/
+/*position : relative absolute*/
