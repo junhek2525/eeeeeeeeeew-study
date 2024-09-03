@@ -39,7 +39,7 @@ function App() {
             </div>
           </>
         }></Route>
-        <Route path="/detail" element={<Detail />}></Route>
+        <Route path="/detail/:id" element={<Detail shoes={shoes} />}></Route>
         <Route path="*" element={<div>없는 페이지 입니다 404Error</div>}></Route>
         <Route path="/about" element={<About />}>
           <Route path="member" element={<div>맴버입니다</div>}></Route>
