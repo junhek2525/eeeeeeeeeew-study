@@ -1,6 +1,8 @@
 // import { useState } from 'react';
 import { useParams } from "react-router-dom"
 import styled from "styled-components"
+import { useEffect, useState } from "react";
+
 
 
 let Box = styled.div`
@@ -14,13 +16,29 @@ let YelloBtn = styled.button`
     padding : 10px;
 `
 function Detail(props){
+useEffect(() => {
+    console.log("안녕안녕");
+    // setTimeout(()=>{
+    //     document.getElementById("yellow").style.display = "None";
+    // }, 2000);
+});
+     
+    let [count, setCount] = useState(0);
     let {id} = useParams();
     let myItem = props.shoes.find(function(x){
         return x.id == id
     });
 
+    let [alert, setAlert] = useState(true)
+    useEffect(() => {
+       let timer =  setTimeout(() => {setAlert(false)}, 2000);
+       return () => {
+        clearTimeout(timer);
+       }
+    })
+// 3WEM
     return(
-        <div className="container">
+        <div className="container">   
             <div className="row">
                 <div className="col-md-6">
                 <img src="/shoe1.png" width="100%"></img>
@@ -33,8 +51,10 @@ function Detail(props){
                 </div>
                 <div>
                     <Box>
-                        <YelloBtn bg="orange">오렌지버튼</YelloBtn>
+                        <YelloBtn bg="orange" onClick={()=> {setCount(count+1)}}>오렌지버튼</YelloBtn>
                         <YelloBtn bg="blue">파란 버튼</YelloBtn>
+                       { alert == true ? <YelloBtn>2초후 사라짐</YelloBtn> : null}
+                        {/* <YelloBtn bg="yellow" >노란 버튼</YelloBtn> */}
                     </Box>
                 </div>
             </div>
