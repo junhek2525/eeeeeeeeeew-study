@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { useEffect, useState } from "react";
 import { Nav } from "react-bootstrap";
 import '../App.css';
-
+import { 재고Context } from '../App.js';
 
 
 // let Box = styled.div`
