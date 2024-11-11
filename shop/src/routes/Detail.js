@@ -62,9 +62,9 @@ function Detail(props){
     let [fade2, setFade2] = useState('')
 
     useEffect(() =>{
-        let 꺼낸거 = localStorage.getItem('watched')
-        꺼낸거 = JSON.parse(꺼낸거)
-        꺼낸거.Push(myItem.id)
+        // let 꺼낸거 = localStorage.getItem('watched')
+        // 꺼낸거 = JSON.parse(꺼낸거)
+        // 꺼낸거.Push(myItem.id)
         // 꺼낸거 = new Set(꺼낸거)
         
         // 꺼낸거 = Array.from(꺼낸거)
