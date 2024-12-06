@@ -19,7 +19,7 @@ npm start
 ```
 
 4.Open Browser
-```
+```bash
 https://localhost:3000
 ```
 
